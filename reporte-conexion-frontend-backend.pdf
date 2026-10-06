@@ -1,0 +1,1112 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R 18 0 R 20 0 R 22 0 R] /Count 9 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 5626 >>
+stream
+0.18 0.25 0.38 rg 0 812 595 30 re f
+BT 1 1 1 rg /F2 9 Tf 1 0 0 1 48 822 Tm (Informe técnico - CRUD de alumnos) Tj ET
+BT 0.35 0.35 0.35 rg /F1 8 Tf 1 0 0 1 500 24 Tm (Página 1) Tj ET
+BT 0.10 0.20 0.36 rg /F2 20 Tf 1 0 0 1 48 790 Tm (Conexión de React, Express y SQL Server) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 758 Tm (Proyecto: CRUDEjercicio) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 739 Tm (Objetivo: documentar el código modificado para enviar alumnos desde React, guardarlos con) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 725 Tm (Express en SQL Server y consultar los registros para mostrarlos en el frontend.) Tj ET
+BT 0.12 0.32 0.52 rg /F2 13 Tf 1 0 0 1 48 706 Tm (Aclaración sobre 'sin APIs') Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 684 Tm (El frontend no puede acceder directamente a SQL Server de forma segura. En este proyecto sí) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 670 Tm (existe una API local creada con Express. No se utilizó una API externa ni un servicio de) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 656 Tm (terceros: React se comunica con las rutas HTTP GET y POST de Express en /api/alumnos.) Tj ET
+BT 0.12 0.32 0.52 rg /F2 13 Tf 1 0 0 1 48 637 Tm (Arquitectura resultante) Tj ET
+0.96 0.97 0.98 rg 43 612 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 615 Tm (Navegador \(React / Vite, puerto 5173\)) Tj ET
+0.96 0.97 0.98 rg 43 601 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 604 Tm (        |  fetch\('/api/alumnos'\)) Tj ET
+0.96 0.97 0.98 rg 43 590 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 593 Tm (        v) Tj ET
+0.96 0.97 0.98 rg 43 579 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 582 Tm (Proxy de Vite: /api -> http://localhost:3000) Tj ET
+0.96 0.97 0.98 rg 43 568 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 571 Tm (        |) Tj ET
+0.96 0.97 0.98 rg 43 557 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 560 Tm (        v) Tj ET
+0.96 0.97 0.98 rg 43 546 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 549 Tm (Backend Express \(puerto 3000\)) Tj ET
+0.96 0.97 0.98 rg 43 535 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 538 Tm (        |  consultas parametrizadas con mssql) Tj ET
+0.96 0.97 0.98 rg 43 524 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 527 Tm (        v) Tj ET
+0.96 0.97 0.98 rg 43 513 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 516 Tm (SQL Server \(puerto 1433\) - base Universidad - tabla Alumnos) Tj ET
+BT 0.12 0.32 0.52 rg /F2 13 Tf 1 0 0 1 48 496 Tm (Resumen de cambios) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 54 474 Tm (• vite-project/vite.config.js: se añadió un proxy para redirigir las solicitudes que) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 54 460 Tm (comienzan con /api al backend de Express.) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 54 441 Tm (• vite-project/src/Componentes/Form.jsx: se añadieron estados controlados, validaciones y) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 54 427 Tm (la petición POST que envía el nuevo alumno.) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 54 408 Tm (• vite-project/src/App.jsx: se añadió la petición GET, el control de carga y errores, y una) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 54 394 Tm (tabla para mostrar los alumnos.) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 54 375 Tm (• APIS/server.js ya contenía las rutas GET y POST. React ahora consume esas rutas; Express) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 54 361 Tm (es la capa que consulta SQL Server.) Tj ET
+BT 0.10 0.20 0.36 rg /F2 20 Tf 1 0 0 1 48 342 Tm (1. Proxy de desarrollo de Vite) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 310 Tm (Este cambio permite escribir fetch\('/api/alumnos'\) en React. Vite recibe la solicitud en el) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 296 Tm (puerto del frontend y, durante el desarrollo, la reenvía a Express en el puerto 3000. Así) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 282 Tm (se evitan direcciones repetidas y problemas de CORS mientras ambos servicios se ejecutan) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 268 Tm (localmente.) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 249 Tm (Código actual de vite-project/vite.config.js:) Tj ET
+0.96 0.97 0.98 rg 43 227 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 230 Tm (import react from '@vitejs/plugin-react') Tj ET
+0.96 0.97 0.98 rg 43 216 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 219 Tm (import { defineConfig } from 'vite') Tj ET
+0.96 0.97 0.98 rg 43 205 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 208 Tm () Tj ET
+0.96 0.97 0.98 rg 43 194 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 197 Tm (// https://vite.dev/config/) Tj ET
+0.96 0.97 0.98 rg 43 183 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 186 Tm (export default defineConfig\({) Tj ET
+0.96 0.97 0.98 rg 43 172 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 175 Tm (  plugins: [react\(\)],) Tj ET
+0.96 0.97 0.98 rg 43 161 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 164 Tm (  server: {) Tj ET
+0.96 0.97 0.98 rg 43 150 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 153 Tm (    proxy: {) Tj ET
+0.96 0.97 0.98 rg 43 139 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 142 Tm (      '/api': 'http://localhost:3000',) Tj ET
+0.96 0.97 0.98 rg 43 128 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 131 Tm (    },) Tj ET
+0.96 0.97 0.98 rg 43 117 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 120 Tm (  },) Tj ET
+0.96 0.97 0.98 rg 43 106 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 109 Tm (}\)) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 9 0 R >>
+endobj
+9 0 obj
+<< /Length 7664 >>
+stream
+0.18 0.25 0.38 rg 0 812 595 30 re f
+BT 1 1 1 rg /F2 9 Tf 1 0 0 1 48 822 Tm (Informe técnico - CRUD de alumnos) Tj ET
+BT 0.35 0.35 0.35 rg /F1 8 Tf 1 0 0 1 500 24 Tm (Página 2) Tj ET
+BT 0.10 0.20 0.36 rg /F2 20 Tf 1 0 0 1 48 790 Tm (2. Formulario y envío de datos) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 758 Tm (El formulario usa useState para conservar los valores escritos. Cada input tiene un) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 744 Tm (atributo name igual al nombre que espera Express: Nombre, Apellido, Carnet, Carrera y Edad.) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 725 Tm (Al enviar, event.preventDefault\(\) evita recargar la página. fetch realiza un POST,) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 711 Tm (Content-Type indica que el cuerpo es JSON y JSON.stringify convierte el objeto de) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 697 Tm (JavaScript en el texto que Express puede procesar con express.json\(\).) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 678 Tm (Cuando el backend responde correctamente, el formulario se limpia y onAlumnoCreado solicita) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 664 Tm (nuevamente la lista para reflejar el registro recién insertado.) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 645 Tm (Código actual de vite-project/src/Componentes/Form.jsx:) Tj ET
+0.96 0.97 0.98 rg 43 623 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 626 Tm (import { useState } from "react";) Tj ET
+0.96 0.97 0.98 rg 43 612 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 615 Tm () Tj ET
+0.96 0.97 0.98 rg 43 601 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 604 Tm (const datosIniciales = {) Tj ET
+0.96 0.97 0.98 rg 43 590 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 593 Tm (  Nombre: "",) Tj ET
+0.96 0.97 0.98 rg 43 579 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 582 Tm (  Apellido: "",) Tj ET
+0.96 0.97 0.98 rg 43 568 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 571 Tm (  Carnet: "",) Tj ET
+0.96 0.97 0.98 rg 43 557 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 560 Tm (  Carrera: "",) Tj ET
+0.96 0.97 0.98 rg 43 546 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 549 Tm (  Edad: "",) Tj ET
+0.96 0.97 0.98 rg 43 535 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 538 Tm (};) Tj ET
+0.96 0.97 0.98 rg 43 524 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 527 Tm () Tj ET
+0.96 0.97 0.98 rg 43 513 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 516 Tm (function Form\({ onAlumnoCreado }\) {) Tj ET
+0.96 0.97 0.98 rg 43 502 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 505 Tm (  const [datos, setDatos] = useState\(datosIniciales\);) Tj ET
+0.96 0.97 0.98 rg 43 491 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 494 Tm (  const [confirmado, setConfirmado] = useState\(false\);) Tj ET
+0.96 0.97 0.98 rg 43 480 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 483 Tm (  const [enviando, setEnviando] = useState\(false\);) Tj ET
+0.96 0.97 0.98 rg 43 469 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 472 Tm (  const [mensaje, setMensaje] = useState\(null\);) Tj ET
+0.96 0.97 0.98 rg 43 458 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 461 Tm () Tj ET
+0.96 0.97 0.98 rg 43 447 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 450 Tm (  const actualizarCampo = \(event\) => {) Tj ET
+0.96 0.97 0.98 rg 43 436 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 439 Tm (    const { name, value } = event.target;) Tj ET
+0.96 0.97 0.98 rg 43 425 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 428 Tm (    const nuevoValor = name === "Edad" ? value.replace\(/\\D/g, ""\).slice\(0, 3\) : value;) Tj ET
+0.96 0.97 0.98 rg 43 414 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 417 Tm () Tj ET
+0.96 0.97 0.98 rg 43 403 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 406 Tm (    setDatos\(\(datosActuales\) => \({) Tj ET
+0.96 0.97 0.98 rg 43 392 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 395 Tm (      ...datosActuales,) Tj ET
+0.96 0.97 0.98 rg 43 381 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 384 Tm (      [name]: nuevoValor,) Tj ET
+0.96 0.97 0.98 rg 43 370 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 373 Tm (    }\)\);) Tj ET
+0.96 0.97 0.98 rg 43 359 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 362 Tm (  };) Tj ET
+0.96 0.97 0.98 rg 43 348 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 351 Tm () Tj ET
+0.96 0.97 0.98 rg 43 337 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 340 Tm (  const enviarFormulario = async \(event\) => {) Tj ET
+0.96 0.97 0.98 rg 43 326 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 329 Tm (    event.preventDefault\(\);) Tj ET
+0.96 0.97 0.98 rg 43 315 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 318 Tm (    setEnviando\(true\);) Tj ET
+0.96 0.97 0.98 rg 43 304 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 307 Tm (    setMensaje\(null\);) Tj ET
+0.96 0.97 0.98 rg 43 293 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 296 Tm () Tj ET
+0.96 0.97 0.98 rg 43 282 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 285 Tm (    try {) Tj ET
+0.96 0.97 0.98 rg 43 271 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 274 Tm (      const respuesta = await fetch\("/api/alumnos", {) Tj ET
+0.96 0.97 0.98 rg 43 260 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 263 Tm (        method: "POST",) Tj ET
+0.96 0.97 0.98 rg 43 249 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 252 Tm (        headers: {) Tj ET
+0.96 0.97 0.98 rg 43 238 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 241 Tm (          "Content-Type": "application/json",) Tj ET
+0.96 0.97 0.98 rg 43 227 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 230 Tm (        },) Tj ET
+0.96 0.97 0.98 rg 43 216 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 219 Tm (        body: JSON.stringify\({) Tj ET
+0.96 0.97 0.98 rg 43 205 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 208 Tm (          ...datos,) Tj ET
+0.96 0.97 0.98 rg 43 194 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 197 Tm (          Edad: Number\(datos.Edad\),) Tj ET
+0.96 0.97 0.98 rg 43 183 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 186 Tm (        }\),) Tj ET
+0.96 0.97 0.98 rg 43 172 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 175 Tm (      }\);) Tj ET
+0.96 0.97 0.98 rg 43 161 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 164 Tm () Tj ET
+0.96 0.97 0.98 rg 43 150 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 153 Tm (      const resultado = await respuesta.json\(\);) Tj ET
+0.96 0.97 0.98 rg 43 139 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 142 Tm () Tj ET
+0.96 0.97 0.98 rg 43 128 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 131 Tm (      if \(!respuesta.ok\) {) Tj ET
+0.96 0.97 0.98 rg 43 117 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 120 Tm (        throw new Error\(resultado.mensaje || "No se pudo guardar el alumno"\);) Tj ET
+0.96 0.97 0.98 rg 43 106 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 109 Tm (      }) Tj ET
+0.96 0.97 0.98 rg 43 95 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 98 Tm () Tj ET
+0.96 0.97 0.98 rg 43 84 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 87 Tm (      setDatos\(datosIniciales\);) Tj ET
+0.96 0.97 0.98 rg 43 73 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 76 Tm (      setConfirmado\(false\);) Tj ET
+0.96 0.97 0.98 rg 43 62 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 65 Tm (      setMensaje\({ tipo: "success", texto: resultado.mensaje }\);) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 11 0 R >>
+endobj
+11 0 obj
+<< /Length 8230 >>
+stream
+0.18 0.25 0.38 rg 0 812 595 30 re f
+BT 1 1 1 rg /F2 9 Tf 1 0 0 1 48 822 Tm (Informe técnico - CRUD de alumnos) Tj ET
+BT 0.35 0.35 0.35 rg /F1 8 Tf 1 0 0 1 500 24 Tm (Página 3) Tj ET
+0.96 0.97 0.98 rg 43 787 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 790 Tm (      await onAlumnoCreado?.\(\);) Tj ET
+0.96 0.97 0.98 rg 43 776 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 779 Tm (    } catch \(error\) {) Tj ET
+0.96 0.97 0.98 rg 43 765 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 768 Tm (      setMensaje\({ tipo: "danger", texto: error.message }\);) Tj ET
+0.96 0.97 0.98 rg 43 754 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 757 Tm (    } finally {) Tj ET
+0.96 0.97 0.98 rg 43 743 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 746 Tm (      setEnviando\(false\);) Tj ET
+0.96 0.97 0.98 rg 43 732 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 735 Tm (    }) Tj ET
+0.96 0.97 0.98 rg 43 721 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 724 Tm (  };) Tj ET
+0.96 0.97 0.98 rg 43 710 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 713 Tm () Tj ET
+0.96 0.97 0.98 rg 43 699 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 702 Tm (  return \() Tj ET
+0.96 0.97 0.98 rg 43 688 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 691 Tm (    <form onSubmit={enviarFormulario}>) Tj ET
+0.96 0.97 0.98 rg 43 677 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 680 Tm (      <div className="mb-3">) Tj ET
+0.96 0.97 0.98 rg 43 666 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 669 Tm (        <label htmlFor="nombre" className="form-label">) Tj ET
+0.96 0.97 0.98 rg 43 655 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 658 Tm (          Nombre) Tj ET
+0.96 0.97 0.98 rg 43 644 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 647 Tm (        </label>) Tj ET
+0.96 0.97 0.98 rg 43 633 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 636 Tm (        <input) Tj ET
+0.96 0.97 0.98 rg 43 622 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 625 Tm (          type="text") Tj ET
+0.96 0.97 0.98 rg 43 611 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 614 Tm (          className="form-control") Tj ET
+0.96 0.97 0.98 rg 43 600 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 603 Tm (          id="nombre") Tj ET
+0.96 0.97 0.98 rg 43 589 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 592 Tm (          name="Nombre") Tj ET
+0.96 0.97 0.98 rg 43 578 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 581 Tm (          value={datos.Nombre}) Tj ET
+0.96 0.97 0.98 rg 43 567 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 570 Tm (          onChange={actualizarCampo}) Tj ET
+0.96 0.97 0.98 rg 43 556 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 559 Tm (          maxLength={50}) Tj ET
+0.96 0.97 0.98 rg 43 545 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 548 Tm (          required) Tj ET
+0.96 0.97 0.98 rg 43 534 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 537 Tm (        />) Tj ET
+0.96 0.97 0.98 rg 43 523 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 526 Tm (      </div>) Tj ET
+0.96 0.97 0.98 rg 43 512 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 515 Tm (      <div className="mb-3">) Tj ET
+0.96 0.97 0.98 rg 43 501 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 504 Tm (        <label htmlFor="apellido" className="form-label">) Tj ET
+0.96 0.97 0.98 rg 43 490 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 493 Tm (          Apellido) Tj ET
+0.96 0.97 0.98 rg 43 479 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 482 Tm (        </label>) Tj ET
+0.96 0.97 0.98 rg 43 468 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 471 Tm (        <input) Tj ET
+0.96 0.97 0.98 rg 43 457 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 460 Tm (          type="text") Tj ET
+0.96 0.97 0.98 rg 43 446 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 449 Tm (          className="form-control") Tj ET
+0.96 0.97 0.98 rg 43 435 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 438 Tm (          id="apellido") Tj ET
+0.96 0.97 0.98 rg 43 424 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 427 Tm (          name="Apellido") Tj ET
+0.96 0.97 0.98 rg 43 413 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 416 Tm (          value={datos.Apellido}) Tj ET
+0.96 0.97 0.98 rg 43 402 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 405 Tm (          onChange={actualizarCampo}) Tj ET
+0.96 0.97 0.98 rg 43 391 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 394 Tm (          maxLength={50}) Tj ET
+0.96 0.97 0.98 rg 43 380 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 383 Tm (          required) Tj ET
+0.96 0.97 0.98 rg 43 369 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 372 Tm (        />) Tj ET
+0.96 0.97 0.98 rg 43 358 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 361 Tm (      </div>) Tj ET
+0.96 0.97 0.98 rg 43 347 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 350 Tm (      <div className="mb-3">) Tj ET
+0.96 0.97 0.98 rg 43 336 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 339 Tm (        <label htmlFor="carnet" className="form-label">) Tj ET
+0.96 0.97 0.98 rg 43 325 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 328 Tm (          Carnet) Tj ET
+0.96 0.97 0.98 rg 43 314 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 317 Tm (        </label>) Tj ET
+0.96 0.97 0.98 rg 43 303 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 306 Tm (        <input) Tj ET
+0.96 0.97 0.98 rg 43 292 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 295 Tm (          type="text") Tj ET
+0.96 0.97 0.98 rg 43 281 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 284 Tm (          className="form-control") Tj ET
+0.96 0.97 0.98 rg 43 270 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 273 Tm (          id="carnet") Tj ET
+0.96 0.97 0.98 rg 43 259 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 262 Tm (          name="Carnet") Tj ET
+0.96 0.97 0.98 rg 43 248 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 251 Tm (          value={datos.Carnet}) Tj ET
+0.96 0.97 0.98 rg 43 237 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 240 Tm (          onChange={actualizarCampo}) Tj ET
+0.96 0.97 0.98 rg 43 226 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 229 Tm (          maxLength={20}) Tj ET
+0.96 0.97 0.98 rg 43 215 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 218 Tm (          required) Tj ET
+0.96 0.97 0.98 rg 43 204 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 207 Tm (        />) Tj ET
+0.96 0.97 0.98 rg 43 193 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 196 Tm (      </div>) Tj ET
+0.96 0.97 0.98 rg 43 182 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 185 Tm (      <div className="mb-3">) Tj ET
+0.96 0.97 0.98 rg 43 171 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 174 Tm (        <label htmlFor="carrera" className="form-label">) Tj ET
+0.96 0.97 0.98 rg 43 160 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 163 Tm (          Carrera) Tj ET
+0.96 0.97 0.98 rg 43 149 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 152 Tm (        </label>) Tj ET
+0.96 0.97 0.98 rg 43 138 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 141 Tm (        <input) Tj ET
+0.96 0.97 0.98 rg 43 127 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 130 Tm (          type="text") Tj ET
+0.96 0.97 0.98 rg 43 116 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 119 Tm (          className="form-control") Tj ET
+0.96 0.97 0.98 rg 43 105 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 108 Tm (          id="carrera") Tj ET
+0.96 0.97 0.98 rg 43 94 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 97 Tm (          name="Carrera") Tj ET
+0.96 0.97 0.98 rg 43 83 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 86 Tm (          value={datos.Carrera}) Tj ET
+0.96 0.97 0.98 rg 43 72 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 75 Tm (          onChange={actualizarCampo}) Tj ET
+0.96 0.97 0.98 rg 43 61 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 64 Tm (          maxLength={100}) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 13 0 R >>
+endobj
+13 0 obj
+<< /Length 7579 >>
+stream
+0.18 0.25 0.38 rg 0 812 595 30 re f
+BT 1 1 1 rg /F2 9 Tf 1 0 0 1 48 822 Tm (Informe técnico - CRUD de alumnos) Tj ET
+BT 0.35 0.35 0.35 rg /F1 8 Tf 1 0 0 1 500 24 Tm (Página 4) Tj ET
+0.96 0.97 0.98 rg 43 787 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 790 Tm (          required) Tj ET
+0.96 0.97 0.98 rg 43 776 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 779 Tm (        />) Tj ET
+0.96 0.97 0.98 rg 43 765 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 768 Tm (      </div>) Tj ET
+0.96 0.97 0.98 rg 43 754 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 757 Tm (      <div className="mb-3">) Tj ET
+0.96 0.97 0.98 rg 43 743 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 746 Tm (        <label htmlFor="edad" className="form-label">) Tj ET
+0.96 0.97 0.98 rg 43 732 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 735 Tm (          Edad) Tj ET
+0.96 0.97 0.98 rg 43 721 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 724 Tm (        </label>) Tj ET
+0.96 0.97 0.98 rg 43 710 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 713 Tm (        <input) Tj ET
+0.96 0.97 0.98 rg 43 699 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 702 Tm (          type="text") Tj ET
+0.96 0.97 0.98 rg 43 688 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 691 Tm (          inputMode="numeric") Tj ET
+0.96 0.97 0.98 rg 43 677 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 680 Tm (          maxLength={3}) Tj ET
+0.96 0.97 0.98 rg 43 666 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 669 Tm (          pattern="[0-9]{1,3}") Tj ET
+0.96 0.97 0.98 rg 43 655 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 658 Tm (          className="form-control") Tj ET
+0.96 0.97 0.98 rg 43 644 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 647 Tm (          id="edad") Tj ET
+0.96 0.97 0.98 rg 43 633 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 636 Tm (          name="Edad") Tj ET
+0.96 0.97 0.98 rg 43 622 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 625 Tm (          value={datos.Edad}) Tj ET
+0.96 0.97 0.98 rg 43 611 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 614 Tm (          onChange={actualizarCampo}) Tj ET
+0.96 0.97 0.98 rg 43 600 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 603 Tm (          style={{ width: "6rem" }}) Tj ET
+0.96 0.97 0.98 rg 43 589 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 592 Tm (          title="Ingresa una edad de máximo 3 dígitos") Tj ET
+0.96 0.97 0.98 rg 43 578 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 581 Tm (          required) Tj ET
+0.96 0.97 0.98 rg 43 567 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 570 Tm (        />) Tj ET
+0.96 0.97 0.98 rg 43 556 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 559 Tm (      </div>) Tj ET
+0.96 0.97 0.98 rg 43 545 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 548 Tm (      <div className="mb-3 form-check">) Tj ET
+0.96 0.97 0.98 rg 43 534 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 537 Tm (        <input) Tj ET
+0.96 0.97 0.98 rg 43 523 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 526 Tm (          type="checkbox") Tj ET
+0.96 0.97 0.98 rg 43 512 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 515 Tm (          className="form-check-input") Tj ET
+0.96 0.97 0.98 rg 43 501 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 504 Tm (          id="confirmacion") Tj ET
+0.96 0.97 0.98 rg 43 490 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 493 Tm (          checked={confirmado}) Tj ET
+0.96 0.97 0.98 rg 43 479 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 482 Tm (          onChange={\(event\) => setConfirmado\(event.target.checked\)}) Tj ET
+0.96 0.97 0.98 rg 43 468 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 471 Tm (          required) Tj ET
+0.96 0.97 0.98 rg 43 457 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 460 Tm (        />) Tj ET
+0.96 0.97 0.98 rg 43 446 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 449 Tm (        <label className="form-check-label" htmlFor="confirmacion">) Tj ET
+0.96 0.97 0.98 rg 43 435 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 438 Tm (          Confirmo que estos datos son correctos) Tj ET
+0.96 0.97 0.98 rg 43 424 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 427 Tm (        </label>) Tj ET
+0.96 0.97 0.98 rg 43 413 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 416 Tm (      </div>) Tj ET
+0.96 0.97 0.98 rg 43 402 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 405 Tm () Tj ET
+0.96 0.97 0.98 rg 43 391 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 394 Tm (      {mensaje && \() Tj ET
+0.96 0.97 0.98 rg 43 380 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 383 Tm (        <div className={`alert alert-${mensaje.tipo}`} role="alert">) Tj ET
+0.96 0.97 0.98 rg 43 369 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 372 Tm (          {mensaje.texto}) Tj ET
+0.96 0.97 0.98 rg 43 358 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 361 Tm (        </div>) Tj ET
+0.96 0.97 0.98 rg 43 347 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 350 Tm (      \)}) Tj ET
+0.96 0.97 0.98 rg 43 336 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 339 Tm () Tj ET
+0.96 0.97 0.98 rg 43 325 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 328 Tm (      <button type="submit" className="btn btn-primary" disabled={enviando}>) Tj ET
+0.96 0.97 0.98 rg 43 314 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 317 Tm (        {enviando ? "Guardando..." : "Guardar alumno"}) Tj ET
+0.96 0.97 0.98 rg 43 303 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 306 Tm (      </button>) Tj ET
+0.96 0.97 0.98 rg 43 292 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 295 Tm (    </form>) Tj ET
+0.96 0.97 0.98 rg 43 281 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 284 Tm (  \);) Tj ET
+0.96 0.97 0.98 rg 43 270 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 273 Tm (}) Tj ET
+0.96 0.97 0.98 rg 43 259 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 262 Tm () Tj ET
+0.96 0.97 0.98 rg 43 248 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 251 Tm (export default Form;) Tj ET
+BT 0.10 0.20 0.36 rg /F2 20 Tf 1 0 0 1 48 231 Tm (3. Consulta y presentación de alumnos) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 199 Tm (App.jsx ejecuta GET /api/alumnos al abrir la página. La respuesta JSON se guarda en el) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 185 Tm (estado alumnos y map genera una fila por cada registro. También se manejan estados de carga) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 171 Tm (y error.) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 152 Tm (La función cargarAlumnos se comparte con el botón Actualizar y con Form. Esto evita) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 138 Tm (duplicar la lógica y actualiza la tabla después de un POST exitoso.) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 119 Tm (Código actual de vite-project/src/App.jsx:) Tj ET
+0.96 0.97 0.98 rg 43 97 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 100 Tm (import { useCallback, useEffect, useState } from "react";) Tj ET
+0.96 0.97 0.98 rg 43 86 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 89 Tm (import Form from "./Componentes/Form";) Tj ET
+0.96 0.97 0.98 rg 43 75 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 78 Tm () Tj ET
+0.96 0.97 0.98 rg 43 64 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 67 Tm (const obtenerAlumnos = async \(\) => {) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 15 0 R >>
+endobj
+15 0 obj
+<< /Length 8380 >>
+stream
+0.18 0.25 0.38 rg 0 812 595 30 re f
+BT 1 1 1 rg /F2 9 Tf 1 0 0 1 48 822 Tm (Informe técnico - CRUD de alumnos) Tj ET
+BT 0.35 0.35 0.35 rg /F1 8 Tf 1 0 0 1 500 24 Tm (Página 5) Tj ET
+0.96 0.97 0.98 rg 43 787 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 790 Tm (  const respuesta = await fetch\("/api/alumnos"\);) Tj ET
+0.96 0.97 0.98 rg 43 776 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 779 Tm (  const resultado = await respuesta.json\(\);) Tj ET
+0.96 0.97 0.98 rg 43 765 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 768 Tm () Tj ET
+0.96 0.97 0.98 rg 43 754 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 757 Tm (  if \(!respuesta.ok\) {) Tj ET
+0.96 0.97 0.98 rg 43 743 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 746 Tm (    throw new Error\(resultado.mensaje || "No se pudieron obtener los alumnos"\);) Tj ET
+0.96 0.97 0.98 rg 43 732 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 735 Tm (  }) Tj ET
+0.96 0.97 0.98 rg 43 721 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 724 Tm () Tj ET
+0.96 0.97 0.98 rg 43 710 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 713 Tm (  return resultado;) Tj ET
+0.96 0.97 0.98 rg 43 699 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 702 Tm (};) Tj ET
+0.96 0.97 0.98 rg 43 688 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 691 Tm () Tj ET
+0.96 0.97 0.98 rg 43 677 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 680 Tm (function App\(\) {) Tj ET
+0.96 0.97 0.98 rg 43 666 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 669 Tm (  const [alumnos, setAlumnos] = useState\([]\);) Tj ET
+0.96 0.97 0.98 rg 43 655 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 658 Tm (  const [cargando, setCargando] = useState\(true\);) Tj ET
+0.96 0.97 0.98 rg 43 644 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 647 Tm (  const [error, setError] = useState\(""\);) Tj ET
+0.96 0.97 0.98 rg 43 633 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 636 Tm () Tj ET
+0.96 0.97 0.98 rg 43 622 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 625 Tm (  const cargarAlumnos = useCallback\(async \(\) => {) Tj ET
+0.96 0.97 0.98 rg 43 611 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 614 Tm (    setCargando\(true\);) Tj ET
+0.96 0.97 0.98 rg 43 600 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 603 Tm (    setError\(""\);) Tj ET
+0.96 0.97 0.98 rg 43 589 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 592 Tm () Tj ET
+0.96 0.97 0.98 rg 43 578 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 581 Tm (    try {) Tj ET
+0.96 0.97 0.98 rg 43 567 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 570 Tm (      setAlumnos\(await obtenerAlumnos\(\)\);) Tj ET
+0.96 0.97 0.98 rg 43 556 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 559 Tm (    } catch \(errorPeticion\) {) Tj ET
+0.96 0.97 0.98 rg 43 545 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 548 Tm (      setError\(errorPeticion.message\);) Tj ET
+0.96 0.97 0.98 rg 43 534 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 537 Tm (    } finally {) Tj ET
+0.96 0.97 0.98 rg 43 523 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 526 Tm (      setCargando\(false\);) Tj ET
+0.96 0.97 0.98 rg 43 512 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 515 Tm (    }) Tj ET
+0.96 0.97 0.98 rg 43 501 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 504 Tm (  }, []\);) Tj ET
+0.96 0.97 0.98 rg 43 490 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 493 Tm () Tj ET
+0.96 0.97 0.98 rg 43 479 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 482 Tm (  useEffect\(\(\) => {) Tj ET
+0.96 0.97 0.98 rg 43 468 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 471 Tm (    let componenteActivo = true;) Tj ET
+0.96 0.97 0.98 rg 43 457 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 460 Tm () Tj ET
+0.96 0.97 0.98 rg 43 446 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 449 Tm (    obtenerAlumnos\(\)) Tj ET
+0.96 0.97 0.98 rg 43 435 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 438 Tm (      .then\(\(resultado\) => {) Tj ET
+0.96 0.97 0.98 rg 43 424 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 427 Tm (        if \(componenteActivo\) setAlumnos\(resultado\);) Tj ET
+0.96 0.97 0.98 rg 43 413 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 416 Tm (      }\)) Tj ET
+0.96 0.97 0.98 rg 43 402 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 405 Tm (      .catch\(\(errorPeticion\) => {) Tj ET
+0.96 0.97 0.98 rg 43 391 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 394 Tm (        if \(componenteActivo\) setError\(errorPeticion.message\);) Tj ET
+0.96 0.97 0.98 rg 43 380 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 383 Tm (      }\)) Tj ET
+0.96 0.97 0.98 rg 43 369 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 372 Tm (      .finally\(\(\) => {) Tj ET
+0.96 0.97 0.98 rg 43 358 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 361 Tm (        if \(componenteActivo\) setCargando\(false\);) Tj ET
+0.96 0.97 0.98 rg 43 347 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 350 Tm (      }\);) Tj ET
+0.96 0.97 0.98 rg 43 336 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 339 Tm () Tj ET
+0.96 0.97 0.98 rg 43 325 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 328 Tm (    return \(\) => {) Tj ET
+0.96 0.97 0.98 rg 43 314 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 317 Tm (      componenteActivo = false;) Tj ET
+0.96 0.97 0.98 rg 43 303 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 306 Tm (    };) Tj ET
+0.96 0.97 0.98 rg 43 292 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 295 Tm (  }, []\);) Tj ET
+0.96 0.97 0.98 rg 43 281 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 284 Tm () Tj ET
+0.96 0.97 0.98 rg 43 270 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 273 Tm (  return \() Tj ET
+0.96 0.97 0.98 rg 43 259 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 262 Tm (    <main className="container py-4">) Tj ET
+0.96 0.97 0.98 rg 43 248 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 251 Tm (      <h1 className="mb-4">Registro de alumnos</h1>) Tj ET
+0.96 0.97 0.98 rg 43 237 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 240 Tm () Tj ET
+0.96 0.97 0.98 rg 43 226 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 229 Tm (      <div className="row g-5">) Tj ET
+0.96 0.97 0.98 rg 43 215 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 218 Tm (        <section className="col-lg-5">) Tj ET
+0.96 0.97 0.98 rg 43 204 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 207 Tm (          <h2 className="h4 mb-3">Nuevo alumno</h2>) Tj ET
+0.96 0.97 0.98 rg 43 193 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 196 Tm (          <Form onAlumnoCreado={cargarAlumnos} />) Tj ET
+0.96 0.97 0.98 rg 43 182 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 185 Tm (        </section>) Tj ET
+0.96 0.97 0.98 rg 43 171 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 174 Tm () Tj ET
+0.96 0.97 0.98 rg 43 160 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 163 Tm (        <section className="col-lg-7">) Tj ET
+0.96 0.97 0.98 rg 43 149 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 152 Tm (          <div className="d-flex justify-content-between align-items-center mb-3">) Tj ET
+0.96 0.97 0.98 rg 43 138 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 141 Tm (            <h2 className="h4 mb-0">Alumnos registrados</h2>) Tj ET
+0.96 0.97 0.98 rg 43 127 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 130 Tm (            <button) Tj ET
+0.96 0.97 0.98 rg 43 116 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 119 Tm (              type="button") Tj ET
+0.96 0.97 0.98 rg 43 105 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 108 Tm (              className="btn btn-outline-secondary btn-sm") Tj ET
+0.96 0.97 0.98 rg 43 94 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 97 Tm (              onClick={cargarAlumnos}) Tj ET
+0.96 0.97 0.98 rg 43 83 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 86 Tm (              disabled={cargando}) Tj ET
+0.96 0.97 0.98 rg 43 72 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 75 Tm (            >) Tj ET
+0.96 0.97 0.98 rg 43 61 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 64 Tm (              Actualizar) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 17 0 R >>
+endobj
+17 0 obj
+<< /Length 7711 >>
+stream
+0.18 0.25 0.38 rg 0 812 595 30 re f
+BT 1 1 1 rg /F2 9 Tf 1 0 0 1 48 822 Tm (Informe técnico - CRUD de alumnos) Tj ET
+BT 0.35 0.35 0.35 rg /F1 8 Tf 1 0 0 1 500 24 Tm (Página 6) Tj ET
+0.96 0.97 0.98 rg 43 787 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 790 Tm (            </button>) Tj ET
+0.96 0.97 0.98 rg 43 776 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 779 Tm (          </div>) Tj ET
+0.96 0.97 0.98 rg 43 765 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 768 Tm () Tj ET
+0.96 0.97 0.98 rg 43 754 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 757 Tm (          {error && <div className="alert alert-danger">{error}</div>}) Tj ET
+0.96 0.97 0.98 rg 43 743 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 746 Tm () Tj ET
+0.96 0.97 0.98 rg 43 732 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 735 Tm (          {cargando ? \() Tj ET
+0.96 0.97 0.98 rg 43 721 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 724 Tm (            <p>Cargando alumnos...</p>) Tj ET
+0.96 0.97 0.98 rg 43 710 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 713 Tm (          \) : alumnos.length === 0 ? \() Tj ET
+0.96 0.97 0.98 rg 43 699 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 702 Tm (            <p>No hay alumnos registrados.</p>) Tj ET
+0.96 0.97 0.98 rg 43 688 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 691 Tm (          \) : \() Tj ET
+0.96 0.97 0.98 rg 43 677 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 680 Tm (            <div className="table-responsive">) Tj ET
+0.96 0.97 0.98 rg 43 666 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 669 Tm (              <table className="table table-striped table-bordered align-middle">) Tj ET
+0.96 0.97 0.98 rg 43 655 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 658 Tm (                <thead>) Tj ET
+0.96 0.97 0.98 rg 43 644 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 647 Tm (                  <tr>) Tj ET
+0.96 0.97 0.98 rg 43 633 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 636 Tm (                    <th>ID</th>) Tj ET
+0.96 0.97 0.98 rg 43 622 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 625 Tm (                    <th>Nombre</th>) Tj ET
+0.96 0.97 0.98 rg 43 611 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 614 Tm (                    <th>Apellido</th>) Tj ET
+0.96 0.97 0.98 rg 43 600 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 603 Tm (                    <th>Carnet</th>) Tj ET
+0.96 0.97 0.98 rg 43 589 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 592 Tm (                    <th>Carrera</th>) Tj ET
+0.96 0.97 0.98 rg 43 578 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 581 Tm (                    <th>Edad</th>) Tj ET
+0.96 0.97 0.98 rg 43 567 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 570 Tm (                  </tr>) Tj ET
+0.96 0.97 0.98 rg 43 556 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 559 Tm (                </thead>) Tj ET
+0.96 0.97 0.98 rg 43 545 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 548 Tm (                <tbody>) Tj ET
+0.96 0.97 0.98 rg 43 534 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 537 Tm (                  {alumnos.map\(\(alumno\) => \() Tj ET
+0.96 0.97 0.98 rg 43 523 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 526 Tm (                    <tr key={alumno.IdAlumno}>) Tj ET
+0.96 0.97 0.98 rg 43 512 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 515 Tm (                      <td>{alumno.IdAlumno}</td>) Tj ET
+0.96 0.97 0.98 rg 43 501 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 504 Tm (                      <td>{alumno.Nombre}</td>) Tj ET
+0.96 0.97 0.98 rg 43 490 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 493 Tm (                      <td>{alumno.Apellido}</td>) Tj ET
+0.96 0.97 0.98 rg 43 479 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 482 Tm (                      <td>{alumno.Carnet}</td>) Tj ET
+0.96 0.97 0.98 rg 43 468 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 471 Tm (                      <td>{alumno.Carrera}</td>) Tj ET
+0.96 0.97 0.98 rg 43 457 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 460 Tm (                      <td>{alumno.Edad}</td>) Tj ET
+0.96 0.97 0.98 rg 43 446 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 449 Tm (                    </tr>) Tj ET
+0.96 0.97 0.98 rg 43 435 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 438 Tm (                  \)\)}) Tj ET
+0.96 0.97 0.98 rg 43 424 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 427 Tm (                </tbody>) Tj ET
+0.96 0.97 0.98 rg 43 413 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 416 Tm (              </table>) Tj ET
+0.96 0.97 0.98 rg 43 402 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 405 Tm (            </div>) Tj ET
+0.96 0.97 0.98 rg 43 391 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 394 Tm (          \)}) Tj ET
+0.96 0.97 0.98 rg 43 380 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 383 Tm (        </section>) Tj ET
+0.96 0.97 0.98 rg 43 369 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 372 Tm (      </div>) Tj ET
+0.96 0.97 0.98 rg 43 358 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 361 Tm (    </main>) Tj ET
+0.96 0.97 0.98 rg 43 347 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 350 Tm (  \);) Tj ET
+0.96 0.97 0.98 rg 43 336 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 339 Tm (}) Tj ET
+0.96 0.97 0.98 rg 43 325 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 328 Tm () Tj ET
+0.96 0.97 0.98 rg 43 314 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 317 Tm (export default App;) Tj ET
+BT 0.10 0.20 0.36 rg /F2 20 Tf 1 0 0 1 48 297 Tm (4. Backend Express) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 265 Tm (Express recibe las solicitudes enviadas por React. express.json\(\) interpreta el cuerpo JSON) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 251 Tm (del POST. La ruta GET ejecuta SELECT y devuelve result.recordset; la ruta POST usa) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 237 Tm (parámetros tipados de mssql y ejecuta INSERT.) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 218 Tm (Las entradas parametrizadas reducen el riesgo de inyección SQL porque los datos no se) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 204 Tm (concatenan directamente en la consulta.) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 185 Tm (Código de APIS/server.js que atiende al frontend:) Tj ET
+0.96 0.97 0.98 rg 43 163 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 166 Tm (const express = require\("express"\);) Tj ET
+0.96 0.97 0.98 rg 43 152 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 155 Tm (const { sql, poolPromise } = require\("./db"\);) Tj ET
+0.96 0.97 0.98 rg 43 141 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 144 Tm () Tj ET
+0.96 0.97 0.98 rg 43 130 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 133 Tm (const app = express\(\);) Tj ET
+0.96 0.97 0.98 rg 43 119 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 122 Tm () Tj ET
+0.96 0.97 0.98 rg 43 108 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 111 Tm (// Permite recibir información en formato JSON) Tj ET
+0.96 0.97 0.98 rg 43 97 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 100 Tm (app.use\(express.json\(\)\);) Tj ET
+0.96 0.97 0.98 rg 43 86 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 89 Tm () Tj ET
+0.96 0.97 0.98 rg 43 75 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 78 Tm (// =====================================================) Tj ET
+0.96 0.97 0.98 rg 43 64 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 67 Tm (// MÉTODO GET) Tj ET
+endstream
+endobj
+18 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 19 0 R >>
+endobj
+19 0 obj
+<< /Length 8414 >>
+stream
+0.18 0.25 0.38 rg 0 812 595 30 re f
+BT 1 1 1 rg /F2 9 Tf 1 0 0 1 48 822 Tm (Informe técnico - CRUD de alumnos) Tj ET
+BT 0.35 0.35 0.35 rg /F1 8 Tf 1 0 0 1 500 24 Tm (Página 7) Tj ET
+0.96 0.97 0.98 rg 43 787 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 790 Tm (// Consultar todos los alumnos) Tj ET
+0.96 0.97 0.98 rg 43 776 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 779 Tm (// =====================================================) Tj ET
+0.96 0.97 0.98 rg 43 765 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 768 Tm () Tj ET
+0.96 0.97 0.98 rg 43 754 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 757 Tm (app.get\("/api/alumnos", async \(req, res\) => {) Tj ET
+0.96 0.97 0.98 rg 43 743 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 746 Tm (  try {) Tj ET
+0.96 0.97 0.98 rg 43 732 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 735 Tm (    // Obtener conexión a SQL Server) Tj ET
+0.96 0.97 0.98 rg 43 721 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 724 Tm (    const pool = await poolPromise;) Tj ET
+0.96 0.97 0.98 rg 43 710 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 713 Tm () Tj ET
+0.96 0.97 0.98 rg 43 699 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 702 Tm (    // Ejecutar SELECT) Tj ET
+0.96 0.97 0.98 rg 43 688 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 691 Tm (    const result = await pool.request\(\).query\(`) Tj ET
+0.96 0.97 0.98 rg 43 677 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 680 Tm (                SELECT) Tj ET
+0.96 0.97 0.98 rg 43 666 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 669 Tm (                    IdAlumno,) Tj ET
+0.96 0.97 0.98 rg 43 655 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 658 Tm (                    Nombre,) Tj ET
+0.96 0.97 0.98 rg 43 644 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 647 Tm (                    Apellido,) Tj ET
+0.96 0.97 0.98 rg 43 633 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 636 Tm (                    Carnet,) Tj ET
+0.96 0.97 0.98 rg 43 622 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 625 Tm (                    Carrera,) Tj ET
+0.96 0.97 0.98 rg 43 611 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 614 Tm (                    Edad) Tj ET
+0.96 0.97 0.98 rg 43 600 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 603 Tm (                FROM Alumnos) Tj ET
+0.96 0.97 0.98 rg 43 589 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 592 Tm (            `\);) Tj ET
+0.96 0.97 0.98 rg 43 578 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 581 Tm () Tj ET
+0.96 0.97 0.98 rg 43 567 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 570 Tm (    // Devolver resultado en formato JSON) Tj ET
+0.96 0.97 0.98 rg 43 556 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 559 Tm (    res.json\(result.recordset\);) Tj ET
+0.96 0.97 0.98 rg 43 545 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 548 Tm (  } catch \(error\) {) Tj ET
+0.96 0.97 0.98 rg 43 534 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 537 Tm (    console.error\("Error al consultar:", error\);) Tj ET
+0.96 0.97 0.98 rg 43 523 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 526 Tm () Tj ET
+0.96 0.97 0.98 rg 43 512 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 515 Tm (    res.status\(500\).json\({) Tj ET
+0.96 0.97 0.98 rg 43 501 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 504 Tm (      mensaje: "Error al consultar los alumnos",) Tj ET
+0.96 0.97 0.98 rg 43 490 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 493 Tm (      error: error.message,) Tj ET
+0.96 0.97 0.98 rg 43 479 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 482 Tm (    }\);) Tj ET
+0.96 0.97 0.98 rg 43 468 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 471 Tm (  }) Tj ET
+0.96 0.97 0.98 rg 43 457 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 460 Tm (}\);) Tj ET
+0.96 0.97 0.98 rg 43 446 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 449 Tm () Tj ET
+0.96 0.97 0.98 rg 43 435 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 438 Tm (// =====================================================) Tj ET
+0.96 0.97 0.98 rg 43 424 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 427 Tm (// MÉTODO POST) Tj ET
+0.96 0.97 0.98 rg 43 413 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 416 Tm (// Insertar un nuevo alumno) Tj ET
+0.96 0.97 0.98 rg 43 402 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 405 Tm (// =====================================================) Tj ET
+0.96 0.97 0.98 rg 43 391 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 394 Tm () Tj ET
+0.96 0.97 0.98 rg 43 380 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 383 Tm (app.post\("/api/alumnos", async \(req, res\) => {) Tj ET
+0.96 0.97 0.98 rg 43 369 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 372 Tm (  try {) Tj ET
+0.96 0.97 0.98 rg 43 358 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 361 Tm (    // Recibir datos enviados desde Postman) Tj ET
+0.96 0.97 0.98 rg 43 347 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 350 Tm (    const { Nombre, Apellido, Carnet, Carrera, Edad } = req.body;) Tj ET
+0.96 0.97 0.98 rg 43 336 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 339 Tm () Tj ET
+0.96 0.97 0.98 rg 43 325 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 328 Tm (    // Obtener conexión a SQL Server) Tj ET
+0.96 0.97 0.98 rg 43 314 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 317 Tm (    const pool = await poolPromise;) Tj ET
+0.96 0.97 0.98 rg 43 303 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 306 Tm () Tj ET
+0.96 0.97 0.98 rg 43 292 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 295 Tm (    // Ejecutar INSERT) Tj ET
+0.96 0.97 0.98 rg 43 281 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 284 Tm (    await pool) Tj ET
+0.96 0.97 0.98 rg 43 270 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 273 Tm (      .request\(\)) Tj ET
+0.96 0.97 0.98 rg 43 259 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 262 Tm () Tj ET
+0.96 0.97 0.98 rg 43 248 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 251 Tm (      .input\("Nombre", sql.VarChar\(50\), Nombre\)) Tj ET
+0.96 0.97 0.98 rg 43 237 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 240 Tm (      .input\("Apellido", sql.VarChar\(50\), Apellido\)) Tj ET
+0.96 0.97 0.98 rg 43 226 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 229 Tm (      .input\("Carnet", sql.VarChar\(20\), Carnet\)) Tj ET
+0.96 0.97 0.98 rg 43 215 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 218 Tm (      .input\("Carrera", sql.VarChar\(100\), Carrera\)) Tj ET
+0.96 0.97 0.98 rg 43 204 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 207 Tm (      .input\("Edad", sql.Int, Edad\).query\(`) Tj ET
+0.96 0.97 0.98 rg 43 193 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 196 Tm (                INSERT INTO Alumnos) Tj ET
+0.96 0.97 0.98 rg 43 182 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 185 Tm (                \() Tj ET
+0.96 0.97 0.98 rg 43 171 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 174 Tm (                    Nombre,) Tj ET
+0.96 0.97 0.98 rg 43 160 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 163 Tm (                    Apellido,) Tj ET
+0.96 0.97 0.98 rg 43 149 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 152 Tm (                    Carnet,) Tj ET
+0.96 0.97 0.98 rg 43 138 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 141 Tm (                    Carrera,) Tj ET
+0.96 0.97 0.98 rg 43 127 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 130 Tm (                    Edad) Tj ET
+0.96 0.97 0.98 rg 43 116 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 119 Tm (                \)) Tj ET
+0.96 0.97 0.98 rg 43 105 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 108 Tm (                VALUES) Tj ET
+0.96 0.97 0.98 rg 43 94 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 97 Tm (                \() Tj ET
+0.96 0.97 0.98 rg 43 83 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 86 Tm (                    @Nombre,) Tj ET
+0.96 0.97 0.98 rg 43 72 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 75 Tm (                    @Apellido,) Tj ET
+0.96 0.97 0.98 rg 43 61 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 64 Tm (                    @Carnet,) Tj ET
+endstream
+endobj
+20 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 21 0 R >>
+endobj
+21 0 obj
+<< /Length 7368 >>
+stream
+0.18 0.25 0.38 rg 0 812 595 30 re f
+BT 1 1 1 rg /F2 9 Tf 1 0 0 1 48 822 Tm (Informe técnico - CRUD de alumnos) Tj ET
+BT 0.35 0.35 0.35 rg /F1 8 Tf 1 0 0 1 500 24 Tm (Página 8) Tj ET
+0.96 0.97 0.98 rg 43 787 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 790 Tm (                    @Carrera,) Tj ET
+0.96 0.97 0.98 rg 43 776 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 779 Tm (                    @Edad) Tj ET
+0.96 0.97 0.98 rg 43 765 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 768 Tm (                \)) Tj ET
+0.96 0.97 0.98 rg 43 754 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 757 Tm (            `\);) Tj ET
+0.96 0.97 0.98 rg 43 743 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 746 Tm () Tj ET
+0.96 0.97 0.98 rg 43 732 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 735 Tm (    // Respuesta al cliente) Tj ET
+0.96 0.97 0.98 rg 43 721 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 724 Tm (    res.status\(201\).json\({) Tj ET
+0.96 0.97 0.98 rg 43 710 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 713 Tm (      mensaje: "Alumno insertado correctamente",) Tj ET
+0.96 0.97 0.98 rg 43 699 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 702 Tm (    }\);) Tj ET
+0.96 0.97 0.98 rg 43 688 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 691 Tm (  } catch \(error\) {) Tj ET
+0.96 0.97 0.98 rg 43 677 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 680 Tm (    console.error\("Error al insertar:", error\);) Tj ET
+0.96 0.97 0.98 rg 43 666 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 669 Tm () Tj ET
+0.96 0.97 0.98 rg 43 655 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 658 Tm (    res.status\(500\).json\({) Tj ET
+0.96 0.97 0.98 rg 43 644 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 647 Tm (      mensaje: "Error al insertar el alumno",) Tj ET
+0.96 0.97 0.98 rg 43 633 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 636 Tm (      error: error.message,) Tj ET
+0.96 0.97 0.98 rg 43 622 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 625 Tm (    }\);) Tj ET
+0.96 0.97 0.98 rg 43 611 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 614 Tm (  }) Tj ET
+0.96 0.97 0.98 rg 43 600 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 603 Tm (}\);) Tj ET
+0.96 0.97 0.98 rg 43 589 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 592 Tm () Tj ET
+0.96 0.97 0.98 rg 43 578 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 581 Tm (// =====================================================) Tj ET
+0.96 0.97 0.98 rg 43 567 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 570 Tm (// INICIAR SERVIDOR) Tj ET
+0.96 0.97 0.98 rg 43 556 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 559 Tm (// =====================================================) Tj ET
+0.96 0.97 0.98 rg 43 545 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 548 Tm () Tj ET
+0.96 0.97 0.98 rg 43 534 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 537 Tm (const PORT = 3000;) Tj ET
+0.96 0.97 0.98 rg 43 523 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 526 Tm () Tj ET
+0.96 0.97 0.98 rg 43 512 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 515 Tm (app.listen\(PORT, \(\) => {) Tj ET
+0.96 0.97 0.98 rg 43 501 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 504 Tm (  console.log\(`Servidor ejecutándose en http://localhost:${PORT}`\);) Tj ET
+0.96 0.97 0.98 rg 43 490 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 493 Tm (}\);) Tj ET
+BT 0.10 0.20 0.36 rg /F2 20 Tf 1 0 0 1 48 473 Tm (5. Conexión con SQL Server) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 441 Tm (APIS/db.js crea y reutiliza un pool de conexiones con mssql. server.js espera poolPromise) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 427 Tm (antes de ejecutar cada consulta. Por seguridad, la contraseña no se reproduce en este) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 413 Tm (documento.) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 394 Tm (Configuración documentada con contraseña ocultada:) Tj ET
+0.96 0.97 0.98 rg 43 372 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 375 Tm (const sql = require\("mssql"\);) Tj ET
+0.96 0.97 0.98 rg 43 361 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 364 Tm () Tj ET
+0.96 0.97 0.98 rg 43 350 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 353 Tm (const config = {) Tj ET
+0.96 0.97 0.98 rg 43 339 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 342 Tm (  user: "sa",) Tj ET
+0.96 0.97 0.98 rg 43 328 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 331 Tm (  password: "********",) Tj ET
+0.96 0.97 0.98 rg 43 317 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 320 Tm (  server: "localhost",) Tj ET
+0.96 0.97 0.98 rg 43 306 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 309 Tm (  database: "Universidad",) Tj ET
+0.96 0.97 0.98 rg 43 295 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 298 Tm (  options: {) Tj ET
+0.96 0.97 0.98 rg 43 284 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 287 Tm (    encrypt: false,) Tj ET
+0.96 0.97 0.98 rg 43 273 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 276 Tm (    trustServerCertificate: true,) Tj ET
+0.96 0.97 0.98 rg 43 262 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 265 Tm (  },) Tj ET
+0.96 0.97 0.98 rg 43 251 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 254 Tm (};) Tj ET
+0.96 0.97 0.98 rg 43 240 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 243 Tm () Tj ET
+0.96 0.97 0.98 rg 43 229 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 232 Tm (const poolPromise = new sql.ConnectionPool\(config\)) Tj ET
+0.96 0.97 0.98 rg 43 218 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 221 Tm (  .connect\(\)) Tj ET
+0.96 0.97 0.98 rg 43 207 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 210 Tm (  .then\(\(pool\) => {) Tj ET
+0.96 0.97 0.98 rg 43 196 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 199 Tm (    console.log\(" Conectado correctamente a SQL Server"\);) Tj ET
+0.96 0.97 0.98 rg 43 185 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 188 Tm (    return pool;) Tj ET
+0.96 0.97 0.98 rg 43 174 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 177 Tm (  }\)) Tj ET
+0.96 0.97 0.98 rg 43 163 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 166 Tm (  .catch\(\(error\) => {) Tj ET
+0.96 0.97 0.98 rg 43 152 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 155 Tm (    console.error\(" Error conectando a SQL Server:"\);) Tj ET
+0.96 0.97 0.98 rg 43 141 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 144 Tm (    console.error\(error\);) Tj ET
+0.96 0.97 0.98 rg 43 130 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 133 Tm (    throw error;) Tj ET
+0.96 0.97 0.98 rg 43 119 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 122 Tm (  }\);) Tj ET
+0.96 0.97 0.98 rg 43 108 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 111 Tm () Tj ET
+0.96 0.97 0.98 rg 43 97 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 100 Tm (module.exports = {) Tj ET
+0.96 0.97 0.98 rg 43 86 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 89 Tm (  sql,) Tj ET
+0.96 0.97 0.98 rg 43 75 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 78 Tm (  poolPromise,) Tj ET
+0.96 0.97 0.98 rg 43 64 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 67 Tm (};) Tj ET
+endstream
+endobj
+22 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 23 0 R >>
+endobj
+23 0 obj
+<< /Length 3072 >>
+stream
+0.18 0.25 0.38 rg 0 812 595 30 re f
+BT 1 1 1 rg /F2 9 Tf 1 0 0 1 48 822 Tm (Informe técnico - CRUD de alumnos) Tj ET
+BT 0.35 0.35 0.35 rg /F1 8 Tf 1 0 0 1 500 24 Tm (Página 9) Tj ET
+BT 0.10 0.20 0.36 rg /F2 20 Tf 1 0 0 1 48 790 Tm (6. Flujo completo) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 758 Tm (Guardar un alumno:) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 54 739 Tm (• 1. El usuario completa Form y presiona Guardar alumno.) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 54 720 Tm (• 2. React envía POST /api/alumnos con un objeto JSON.) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 54 701 Tm (• 3. El proxy de Vite reenvía la petición a localhost:3000.) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 54 682 Tm (• 4. Express lee req.body y ejecuta INSERT INTO Alumnos mediante mssql.) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 54 663 Tm (• 5. Express responde con HTTP 201 y un mensaje de éxito.) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 54 644 Tm (• 6. React vuelve a ejecutar GET /api/alumnos y actualiza la tabla.) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 625 Tm (Consultar alumnos:) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 54 606 Tm (• 1. Al cargar App, React envía GET /api/alumnos.) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 54 587 Tm (• 2. Express ejecuta SELECT sobre la tabla Alumnos.) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 54 568 Tm (• 3. SQL Server devuelve las filas y Express las responde como JSON.) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 54 549 Tm (• 4. React guarda el arreglo recibido y lo presenta mediante alumnos.map\(\).) Tj ET
+BT 0.10 0.20 0.36 rg /F2 20 Tf 1 0 0 1 48 530 Tm (7. Ejecución y puertos) Tj ET
+0.96 0.97 0.98 rg 43 495 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 498 Tm (# Terminal 1: backend) Tj ET
+0.96 0.97 0.98 rg 43 484 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 487 Tm (cd APIS) Tj ET
+0.96 0.97 0.98 rg 43 473 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 476 Tm (node server.js) Tj ET
+0.96 0.97 0.98 rg 43 462 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 465 Tm () Tj ET
+0.96 0.97 0.98 rg 43 451 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 454 Tm (# Terminal 2: frontend) Tj ET
+0.96 0.97 0.98 rg 43 440 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 443 Tm (cd vite-project) Tj ET
+0.96 0.97 0.98 rg 43 429 509 12 re f
+BT 0.10 0.15 0.20 rg /F3 7.2 Tf 1 0 0 1 48 432 Tm (npm run dev) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 412 Tm (Puertos: SQL Server usa 1433, Express usa 3000 y Vite normalmente usa 5173. Si se modifica) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 398 Tm (vite.config.js mientras Vite está abierto, es necesario reiniciarlo.) Tj ET
+BT 0.12 0.32 0.52 rg /F2 13 Tf 1 0 0 1 48 379 Tm (Resultado de validación) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 357 Tm (El frontend compiló correctamente con npm run build, el linter terminó sin advertencias ni) Tj ET
+BT 0.12 0.12 0.12 rg /F1 10 Tf 1 0 0 1 48 343 Tm (errores y se comprobó que SQL Server permite consultar la tabla Alumnos.) Tj ET
+endstream
+endobj
+xref
+0 24
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000176 00000 n 
+0000000273 00000 n 
+0000000375 00000 n 
+0000000470 00000 n 
+0000000616 00000 n 
+0000006294 00000 n 
+0000006440 00000 n 
+0000014156 00000 n 
+0000014304 00000 n 
+0000022587 00000 n 
+0000022735 00000 n 
+0000030367 00000 n 
+0000030515 00000 n 
+0000038948 00000 n 
+0000039096 00000 n 
+0000046860 00000 n 
+0000047008 00000 n 
+0000055475 00000 n 
+0000055623 00000 n 
+0000063044 00000 n 
+0000063192 00000 n 
+trailer
+<< /Size 24 /Root 1 0 R >>
+startxref
+66317
+%%EOF
